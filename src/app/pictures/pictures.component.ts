@@ -9,17 +9,14 @@ export class PicturesComponent implements OnInit {
     artimages: string[] = [
         1, 2, 3].map((n) => `assets/art/dmgartphoto-art${n}.jpg`);
 
-    fractalimages: string[] = [
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-        11, 12, 13, 14, 15, 16].map((n) => `assets/fractal/dmgartphoto-fractal${n}.jpg`);
-
     photoimages: string[] = [
         1, 2, 3].map((n) => `assets/photo/dmgartphoto-photo${n}.jpg`);
 
     logoimages: string[] = [
         1].map((n) => `assets/logo/dmgartphoto-logo${n}.jpg`);
 
-    iconsetmages: string[] = [ 1, 2, 3, 4].map((n) => `assets/iconset/dmgartphoto-icon${n}.jpg`);
+    iconsetmages: string[] = [ 
+        1, 2, 3, 4].map((n) => `assets/iconset/dmgartphoto-icon${n}.jpg`);
 
     imageTextHeader = 'Photos';
     imageText = 'Text that will show in HTML output';
@@ -28,6 +25,7 @@ export class PicturesComponent implements OnInit {
     divStyle = 'opacity: 0;';
     menuStyle = 'margin-top: 0%;background-color: white;opacity: 0.4;';
     activeMenu = 'photo';
+    
     constructor() { }
 
     ngOnInit(): void {
@@ -72,12 +70,6 @@ export class PicturesComponent implements OnInit {
             case 'icon':
                 this.images = this.iconsetmages;
                 this.imageTextHeader = 'Icon poster';
-                this.imageText =  this.imageText
-                    + 'Text that will show in HTML output';
-                break;
-            case 'fractal':
-                this.images = this.fractalimages;
-                this.imageTextHeader = 'Fractals';
                 this.imageText =  this.imageText
                     + 'Text that will show in HTML output';
                 break;
