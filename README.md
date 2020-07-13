@@ -100,6 +100,7 @@ It also tells that there should be three files ending with the numbers 1, 2 and 
 
 Now - lets say you have copies 56 files named them myartfile, myartfile2 ... myartfile56 in the assets/art folder. 
 Change the code to look like this:
+
     artimages: string[] = [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
         11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -107,15 +108,17 @@ Change the code to look like this:
         31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
         41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
         51, 52, 53, 54, 55, 56].map((n) => `assets/art/myartfile2${n}.jpg`);
+        
 
 If you now run the code (See Item 7 RUN THE PROJECT) you should be able to flip through you photos in the picture section.
 You can now to the same for:
+
     photoimages: string[] = [
         1, 2, 3].map((n) => `assets/photo/dmgartphoto-photo${n}.jpg`);
-
+        
     logoimages: string[] = [
         1].map((n) => `assets/logo/dmgartphoto-logo${n}.jpg`);
-
+        
     iconsetmages: string[] = [ 
         1, 2, 3, 4].map((n) => `assets/iconset/dmgartphoto-icon${n}.jpg`);
 
