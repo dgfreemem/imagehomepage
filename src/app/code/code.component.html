@@ -1,0 +1,60 @@
+<div [style]="menuStyle" class="menu" (mouseover)="highLightMenu(true)" (mouseleave)="highLightMenu(false)" >
+    <ul class="nav  justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link link" routerLink="/home" >HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link" routerLink="/pictures" >PICTURES</a>
+        </li>
+      </ul>
+</div>
+
+<div class="row" style="margin-top: 0%;">
+    <div class="col-lg-3 infoarea" >
+        <h2 style="color:#550011">
+            Site name
+        </h2>
+        <p>
+            Text
+        </p>
+        <p>
+            Text
+        </p>
+        <p>
+            Text
+        </p>
+        <p>
+            Text
+        </p>
+        <p>
+            Text
+        </p>
+        <ul>
+            <li><a target="_blank" class="link" href="https://link">link text</a>
+            <li><a target="_blank" class="link" href="https://link">link text</a>
+        </ul>
+    </div>
+    <div class="col-lg-9" style="margin-top: 5%;">
+        <ngb-carousel 
+            *ngIf="images"  
+            [showNavigationArrows]="true" 
+            [showNavigationIndicators]="false">
+            <ng-template ngbSlide *ngFor="let image of images">
+                <div class="picsum-img-wrapper">
+                    <img [src]="image" 
+                        class="displayed" 
+                        [alt]="stripImgPath(image)" 
+                        [title]="stripImgPath(image)">
+                </div>
+                <div [style]="divStyle" 
+                    class="carousel-caption" 
+                    (mouseover)="highLightLogo(true)" 
+                    (mouseleave)="highLightLogo(false)" >
+                    <span style="opacity: 0.5">
+                        <img style="background-color: pink;" [style]="imgStyle" src="assets/dmgartphotologo1.png">
+                    </span>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div> 
