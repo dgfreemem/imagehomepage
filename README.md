@@ -1,5 +1,8 @@
 ## INSTRUCTIONS
-A bit daunting for the newcumber this instruction is. But it should be possible to make it run with these instructions. Please 
+A bit daunting for the newcumber this instruction is. But it should be possible to make it run with these instructions. 
+Please leave a message on https://dmgartphoto.se/about if you think the instructions are wrong and I'll get back to you.
+In item 9 HOW TO EDIT THE CODE I'll show what you can change and how.
+
 To set this project up you need to install: 
 * NPM (comes with node.js), for managing all the add on libraries as well as development web server
 * Angular CLI, the framework that is used to create the code
@@ -53,7 +56,7 @@ Install browser debug plugin
 * Click the small green install button to the rigth
 * Also consider intalling the extension tslint (gives you honts on improving the code)
 
-## 7 SET UP IN VS CODE
+## 7 RUN THE PROJECT
 To see the result in the browser you need to compile and run the project, like so:
 * In the terminal terminal, compile the code by window at the bottom of VS code, type the command: ng serve
 * Hit F5 to to start Firefox or Chrome in debug mode 
@@ -83,4 +86,41 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## 9 HOW TO EDIT THE CODE
+The code is based on that you have a bunch of files that you wnat to show. To make it work you need to rename them in an incremental order like, file1.jeg, file2.jpe ... fileNN.jpg. There can be no gap in the sequence so if you remove a file you need to rename the series again.
+
+In the basic setup there are 5 folders: assets/art, assets/photo, assets/iconset, assets/code and assets/logo where you can put your files. A later exercise for you could be to att more folders and change the code accordingly. Looking in the examples you can see files named in sequence and the code reflects how many files there are. Lets examin the code that handles the images, open the file: src/app/pictures/pictures.component.ts.
+
+Find the line with code:
+photoimages: string[] = [
+        1, 2, 3].map((n) => `assets/photo/dmgartphoto-photo${n}.jpg`);
+This tells the code to look for files in assets/photo/ with names starting with dmgartphoto-photo and having the format jpg.
+It also tells that there should be three files ending with the numbers 1, 2 and 3.
+
+Now - lets say you have copies 56 files named them myartfile, myartfile2 ... myartfile56 in the assets/art folder. 
+Change the code to look like this:
+
+    artimages: string[] = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+        11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+        31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+        41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
+        51, 52, 53, 54, 55, 56].map((n) => `assets/art/myartfile2${n}.jpg`);
+        
+
+If you now run the code (See Item 7 RUN THE PROJECT) you should be able to flip through you photos in the picture section.
+You can now to the same for:
+
+    photoimages: string[] = [
+        1, 2, 3].map((n) => `assets/photo/dmgartphoto-photo${n}.jpg`);
+        
+    logoimages: string[] = [
+        1].map((n) => `assets/logo/dmgartphoto-logo${n}.jpg`);
+        
+    iconsetmages: string[] = [ 
+        1, 2, 3, 4].map((n) => `assets/iconset/dmgartphoto-icon${n}.jpg`);
+
+
 
