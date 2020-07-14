@@ -1,22 +1,19 @@
 <div [style]="menuStyle" class="menu" (mouseover)="highLightMenu(true)" (mouseleave)="highLightMenu(false)" >
     <ul class="nav  justify-content-center">
         <li class="nav-item">
-            <a class="nav-link link"  routerLink="/home">HOME</a>
+            <a class="nav-link link"  routerLink="/home">YOUR HOME MENU TEXT</a>
         </li>        
         <li class="nav-item" [style]="isActive('photo')">
-          <a class="nav-link link" style="cursor: pointer;" (click)="show('photo')">PHOTO</a>
+          <a class="nav-link link" style="cursor: pointer;" (click)="show('photo')">YOUR PHOTO MENU TEXT</a>
         </li> 
         <li class="nav-item" [style]="isActive('art')">
-          <a class="nav-link link" style="cursor: pointer;" (click)="show('art')">ART</a>
+          <a class="nav-link link" style="cursor: pointer;" (click)="show('art')">YOUR ART MENU TEXT</a>
         </li>
         <li class="nav-item" [style]="isActive('icon')">
-            <a class="nav-link link" style="cursor: pointer;" (click)="show('icon')">ICON</a>
+            <a class="nav-link link" style="cursor: pointer;" (click)="show('icon')">YOUR ICON MENU TEXT</a>
         </li>
         <li class="nav-item" [style]="isActive('logo')">
-            <a class="nav-link link"  style="cursor: pointer;" (click)="show('logo')">LOGO</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link link"  routerLink="/code">SITE CODE</a>
+            <a class="nav-link link"  style="cursor: pointer;" (click)="show('logo')">YOUR LOGO MENU TEXT</a>
         </li>
       </ul>
 </div>
@@ -24,24 +21,24 @@
 <div class="row" style="margin-top: 0%;">
     <div class="col-lg-3 infoarea">
         <h3 style="color:#550011">
-            {{imageTextHeader}} by Your name/company
+            {{imageTextHeader}} by YOUR COMPANY
         </h3>
         <p>
             <b>{{imageText}}</b>
         </p>
         <p>
-            Text
+            YOUR TEXT
         </p>
         <p>
-            Text
+            YOUR TEXT
         </p>
         <p>
-            Text
+            YOUR TEXT
         </p>
         <ul>
-            <li><a target="_blank" class="link" href="https://link">link text</a>
-                <li><a target="_blank" class="link" href="https://link">link text</a>
-            </ul>
+            <li><a target="_blank" class="link" href="https://YOUREXTERNALLINK">YOUR LINK TEXT</a>
+            <li><a target="_blank" class="link" href="https://YOUREXTERNALLINK">YOUR LINK TEXT</a>
+        </ul>
     </div>
     <div class="col-lg-9">
         <ngb-carousel 

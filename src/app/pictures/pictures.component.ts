@@ -9,9 +9,6 @@ export class PicturesComponent implements OnInit {
     artimages: string[] = [
         1, 2, 3].map((n) => `assets/art/dmgartphoto-art${n}.jpg`);
 
-    codeimages: string[] = [
-        1, 2, 3].map((n) => `assets/code/dmgartphoto-code${n}.png`);
-
     photoimages: string[] = [
         1, 2, 3, 4, 5 ,6].map((n) => `assets/photo/dmgartphoto-photo${n}.jpg`);
 
