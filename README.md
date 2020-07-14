@@ -3,6 +3,8 @@ A bit daunting for the newcumber this instruction is. But it should be possible 
 Please leave a message on https://dmgartphoto.se/about if you think the instructions are wrong and I'll get back to you.
 In item 9 HOW TO EDIT THE CODE I'll show what you can change and how.
 
+
+#### *9. BASICS* 
 To set this project up you need to install: 
 * NPM (comes with node.js), for managing all the add on libraries as well as development web server
 * Angular CLI, the framework that is used to create the code
@@ -93,7 +95,7 @@ The code is based on that you have a bunch of files that you wnat to show. To ma
 In the basic setup there are 5 folders: assets/art, assets/photo, assets/iconset, assets/code and assets/logo where you can put your files. A later exercise for you could be to att more folders and change the code accordingly. Looking in the examples you can see files named in sequence and the code reflects how many files there are. Lets examin the code that handles the images, open the file: src/app/pictures/pictures.component.ts.
 
 Find the line with code:
-photoimages: string[] = [
+    photoimages: string[] = [
         1, 2, 3].map((n) => `assets/photo/dmgartphoto-photo${n}.jpg`);
 This tells the code to look for files in assets/photo/ with names starting with dmgartphoto-photo and having the format jpg.
 It also tells that there should be three files ending with the numbers 1, 2 and 3.
