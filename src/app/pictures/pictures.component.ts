@@ -13,7 +13,7 @@ export class PicturesComponent implements OnInit {
         1, 2, 3].map((n) => `assets/code/dmgartphoto-code${n}.png`);
 
     photoimages: string[] = [
-    1, 2, 3].map((n) => `assets/photo/dmgartphoto-photo${n}.jpg`);
+        1, 2, 3, 4, 5 ,6].map((n) => `assets/photo/dmgartphoto-photo${n}.jpg`);
 
     logoimages: string[] = [
         1].map((n) => `assets/logo/dmgartphoto-logo${n}.jpg`);
